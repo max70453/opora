@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after 
+  box-sizing: border-box
+
+html 
+  font-family: sans-serif
+  line-height: 1.15
+  -ms-overflow-style: scrollbar
+  -webkit-tap-highlight-color: rgba(#000, 0)
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul
+  margin: 0
+  padding: 0
+  font-weight: normal
+
+ol, ul
+  list-style: none
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section
+  display: block
+
+img
+  max-width: 100%
+  height: auto
+
+a
+  text-decoration: none
+
+@at-root
+  @-ms-viewport
+    width: device-width
+
+body
+  text-align: left
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizelegibility
+  backface-visibility: hidden
+  width: 100%
+  margin: 0 auto
+  -moz-osx-font-smoothing: grayscale
+
+// @media screen and (min-width: 620px) 
+//   body 
+//     font-size: 1.9rem
+//     line-height: 1.31579
