@@ -1,4 +1,4 @@
-
+import './card';
 import './container';
 import './title';
 
