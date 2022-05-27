@@ -1,0 +1,55 @@
+- var title = "Преимущества работы с нами";
+- 
+  const cardValue = [
+    {
+      source: "hours.svg", 
+      alt: "hours", 
+      cardTitle: "Оперативность", 
+      description: "Выезд замерщика, и бригады на монтаж в кратчайшие сроки"
+    },
+    {
+      source: "hand.svg", 
+      alt: "hand", 
+      cardTitle: "Качество", 
+      description: "Высокое качество работы, гарантия на работы 2 года"
+    },
+    {
+      source: "moneybox.svg", 
+      alt: "moneybox", 
+      cardTitle: "Цены", 
+      description: "Низкие цены на всю продукцию и услуги"
+    },
+    {
+      source: "profee.svg", 
+      alt: "profe", 
+      cardTitle: "Профессионализм", 
+      description: "Опытные специалисты с высоким уровнем подготовки"
+    },
+    {
+      source: "speed.svg", 
+      alt: "speed", 
+      cardTitle: "Скорость", 
+      description: "Возможность выполнить большой объем работ в сжатые сроки"
+    },
+    {
+      source: "special_offers.svg", 
+      alt: "special_offers", 
+      cardTitle: "Спец.предложения", 
+      description: "Постоянным клиентам дарим максимальные скидки. Предоставляем скидки для пенсионеров"
+    },
+  ];
+
+.container
+  section.advantages
+    h2.advantages__title.title= title
+    .advantages__cards
+      each item in cardValue
+        .advantages__card-wrap
+          .card
+            .advantages__card-img
+              img(src=require('/images/icons/' + item.source) alt=item.alt)
+            .advantages__card-title= item.cardTitle
+            .advantages__card-text= item.description
+
+
+
