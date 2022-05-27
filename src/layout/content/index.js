@@ -1,1 +1,1 @@
-import './content.sass';
+import './main';
