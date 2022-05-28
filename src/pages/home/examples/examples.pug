@@ -1,0 +1,54 @@
+- var title = "Примеры работ";
+- 
+  const slider = [
+    { 
+      source: "photo.jpg", 
+      alt: "slide-1" 
+    },
+    { 
+      source: "photo2.jpg", 
+      alt: "slide-2" 
+    },
+    { 
+      source: "photo3.jpg", 
+      alt: "slide-3" 
+    },
+    { 
+      source: "photo4.jpg", 
+      alt: "slide-4" 
+    },
+    { 
+      source: "photo5.jpg", 
+      alt: "slide-5" 
+    },
+    { 
+      source: "photo6.jpg", 
+      alt: "slide-6" 
+    },
+     { 
+      source: "photo7.jpg", 
+      alt: "slide-7" 
+    },
+    { 
+      source: "photo8.jpg", 
+      alt: "slide-8" 
+    },
+    { 
+      source: "photo9.jpg", 
+      alt: "slide-9" 
+    },
+  ];
+
+section.examples
+  .container
+    h2.examples__title.title= title
+    .swiper
+      .swiper-wrapper
+        each slide in slider
+          .swiper-slide
+            .examples__slide-wrap
+              img(src=require('/images/' + slide.source), alt=slide.alt).examples__img
+      .swiper-button-prev
+      .swiper-button-next
+      .swiper-pagination
+      

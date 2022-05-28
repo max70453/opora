@@ -1,5 +1,4 @@
 import $ from 'jquery';
-
 // Uncomment for use BOOTSTAP4
 // window.Popper = require('popper.js').default;
 // require('bootstrap');
@@ -9,9 +8,12 @@ import './fonts';
 import initLayout from './layout';
 import initBlocks from './blocks';
 import initPages from './pages';
+import swiper from './layout';
+
 
 $(() => {
   initLayout();
   initBlocks();
   initPages();
+  swiper();
 });

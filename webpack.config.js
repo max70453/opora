@@ -328,7 +328,7 @@ const config = {
     host: SERVER_HOST,
     port: SERVER_PORT,
     hot: true,
-    liveReload: false,
+    liveReload: true,
     headers: { 'Access-Control-Allow-Origin': '*' },
   },
 
