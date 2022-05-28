@@ -1,0 +1,81 @@
+.header-mobile
+	padding: 15px 0
+	display: none
+
+	@include max-w(768)
+		display: flex
+
+.header-mobile__burger 
+	display: inline-block
+	position: relative
+	vertical-align: middle
+	max-width: 50px
+	height: 48px
+	padding: 15px
+	background-color: transparent
+	border: 0
+	cursor: pointer
+	
+	&::before,
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		width: 30px
+		height: 2px
+		background-color: $color-background
+		transition: transform 0.3s
+
+.header-mobile__line
+	display: inline-block
+	height: 2px
+	width: 30px
+	margin-bottom: 3px
+	background-color: $color-background
+	transition: width 0.3s
+		
+.header-mobile__wrap 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    padding: 0 12px
+
+    @include max-w(480)
+        display: none
+
+.header-mobile__logo
+	font-family: "Raleway-Bold"
+	font-size: 25px
+	letter-spacing: 1px
+
+.header-mobile__contacts
+	display: flex
+	align-items: center
+
+.header-mobile__phone
+
+.header-mobile__phone span
+	display: block
+	font-size: 14px
+	margin-right: 10px
+
+.header-mobile__button
+	width: 120px
+	height: 35px
+	display: flex
+	align-items: center
+	justify-content: center
+	border: 2px solid $color-background
+	font-size: 12px
+	font-weight: $font-weight-semi-bold
+	cursor: pointer
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+
+	&:hover
+		background-color: $color-background
+		color: $color-accent
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+
+.header-mobile__menu
+    display: none

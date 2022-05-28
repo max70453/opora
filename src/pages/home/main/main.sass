@@ -5,20 +5,34 @@
 	background-attachment: scroll
 	background-size: cover
 	background-repeat: no-repeat
-	height: 750px
-	padding-top: 14%
+	padding-top: 15%
+	padding-bottom: 11%
 
 .main-screen__content
-	width: 100%
+	width: 70%
 
 	@include max-w(1024)
 		padding-left: 5%
 
+	@include max-w(768)
+		margin: 0 auto
+
 .main-screen__title
-	width: 77%
 	font-family: "Raleway-ExtraBold"
-	font-size: 64px
+	font-size: px-to-vw(65,1440)
 	color: $color-background
+	text-transform: uppercase
 	margin-bottom: 9.5%
 
 .main-screen__btn
+
+.main-screen__decor
+	content: ""
+	position: absolute
+	display: block
+	background: url("/images/333.svg") no-repeat
+	background-size: cover
+	width: 16%
+	height: 24%
+	right: 7%
+	bottom: -12%

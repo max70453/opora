@@ -14,9 +14,7 @@ html
   body
     include header/header
     .content
-      main.main
-        include content/main/main
-        block content
+      block content
     include footer/footer
     script(src='webpack/js/vendors.js?' + hash)
     script(src='webpack/js/app.js?' + hash)
