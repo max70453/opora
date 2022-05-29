@@ -11,9 +11,8 @@ import 'swiper/css/pagination';
 
 Swiper.use([Pagination, Navigation]);
 
-const Slider = function(){
-const swiper = new Swiper('.swiper', {
-    // modules: [Navigation, Pagination],
+const Slider = new Swiper('.swiper', {
+    modules: [Navigation, Pagination],
     slidesPerView: 3,
     slidesPerGroup: 3,
     loopFillGroupWithBlank: true,
@@ -35,5 +34,5 @@ const swiper = new Swiper('.swiper', {
       delay: 1000,
     },
   });
-};
-export default Slider();
+
+export default Slider;

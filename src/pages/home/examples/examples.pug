@@ -46,9 +46,13 @@ section.examples
       .swiper-wrapper
         each slide in slider
           .swiper-slide
-            .examples__slide-wrap
-              img(src=require('/images/' + slide.source), alt=slide.alt).examples__img
+            .examples__slide-wrap.hover-image-scale
+              a(href=require('/images/' + slide.source)).with-caption.image-link
+                img(src=require('/images/' + slide.source), alt=slide.alt).examples__img.hover-image-scale
       .swiper-button-prev
       .swiper-button-next
       .swiper-pagination
+    //- <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Christmas_flood_1717.jpg/1280px-Christmas_flood_1717.jpg" class="with-caption image-link">
+    //- <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Christmas_flood_1717.jpg/1280px-Christmas_flood_1717.jpg" width="172" height="105" />  
+    //- </a>
       
