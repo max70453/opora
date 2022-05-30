@@ -1,7 +1,7 @@
 import 'magnific-popup/dist/jquery.magnific-popup.js';
 
 const Popup = function(){
-    $('a').magnificPopup({
+    $('.examples__image-link').magnificPopup({
     type: 'image',
     closeBtnInside: false,
     closeOnContentClick: true,

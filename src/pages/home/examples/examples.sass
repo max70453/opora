@@ -2,13 +2,16 @@
   
 .examples
   text-align: center
-  background-color: aliceblue
+  background-color: #f1f1f1
   padding-top: 8%
   padding-bottom: 15%
   min-width: 0
 
 .examples__title
   margin-bottom: 6%
+
+.examples__slide-wrap
+  box-shadow: 0 0 40px 5px rgb(210, 227, 255)
 
 .hover-image-scale
   display: inline-block
@@ -30,13 +33,8 @@
   display: block
   width: 100px
   border-radius: 5px
+  margin-bottom: 50px
 
-// .examples__slide-wrap
-//   width: 100%
-//   height: 200px
-//   margin: 0 auto
-//   background-size: 0
-  
 .swiper-slide .examples__img
   display: block
   aspect-ratio: 1.5 / 1
@@ -55,32 +53,31 @@
   left: 0
   font-size: x-large
 
-.swiper-button-prev,
-.swiper-button-next
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next
   width: 60px
   height: 60px
-  // border: 1px solid #1FA4B2
   border-radius: 50%
+  top: 40%
 
   &:hover
     transition: .2s ease-out
     background-color: #f0f8ff93
     
-
 .swiper-pagination-bullet
   width: 15px
   height: 15px
   border-radius: 50%
   margin-bottom: 11%
   cursor: pointer
-  background-color: aliceblue
+  background-color: #1FA4B2
   opacity: 1
 
 .swiper-pagination-bullet-active
-  background: #1FA4B2
+  background: #f0f8ff93
+  border: 1px solid #1FA4B2
 
 // popup styles
-
 .mfp-preloader
   width: 30px
   height: 30px
