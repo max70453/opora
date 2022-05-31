@@ -2,36 +2,8 @@
 	padding: 15px 0
 	display: none
 
-	@include max-w(768)
+	@include max-w(840)
 		display: flex
-
-// .header-mobile__burger 
-// 	display: inline-block
-// 	position: relative
-// 	vertical-align: middle
-// 	max-width: 50px
-// 	height: 50px
-// 	padding: 15px
-// 	background-color: transparent
-// 	border: 0
-// 	cursor: pointer
-
-// .header-mobile__line
-// 	display: block
-// 	height: 2px
-// 	width: 30px
-// 	margin: 5px auto
-// 	background-color: $color-background
-// 	transition: all 0.7s ease-in-out
-
-// .header-mobile__burger.is-active .header-mobile__line:nth-child(1)
-// 	transform: translateY(7px) rotate(45deg)
-
-// .header-mobile__burger.is-active .header-mobile__line:nth-child(2)
-// 	opacity: 0
-
-// .header-mobile__burger.is-active .header-mobile__line:nth-child(3)
-// 	transform: translateY(-7px) rotate(-45deg)
 		
 .header-mobile__wrap 
     display: flex
@@ -84,7 +56,7 @@
 	height: 100vh
 	max-width: 250px
 	background-color: $color-background
-	padding-top: 15px
+	padding: 15px
 	transform: translate(-100%,0)
 	transition: all 0.5s ease-in-out
 	
@@ -94,3 +66,20 @@
 
 .header-mobile__menu-burger
 	margin-bottom: 15px
+
+.header-mobile__overlay
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	opacity: 0
+	visibility: hidden
+	transition: opacity .5s, visibility .5s, height .5s
+	overflow: hidden
+	background: black
+	z-index: -1
+
+.header-mobile__menu.open ~ .header-mobile__overlay
+	visibility: visible
+	opacity: 0.6
