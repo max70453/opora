@@ -1,4 +1,3 @@
-// import './content';
 import './header';
 import './footer';
 

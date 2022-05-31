@@ -1,0 +1,90 @@
+.header
+	width: 100%
+	position: absolute
+	top: 0
+	left: 0
+	padding: 25px 0
+	background-color: transparent
+	color: $color-background
+	z-index: 2000
+
+	@include max-w(840)
+		display: none
+
+.header__wrap
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.header__logo
+	font-family: "Raleway-ExtraBold"
+	font-size: 33px
+	letter-spacing: 2px
+
+	@include max-w(1100)
+		font-size: 25px
+
+.header__menu
+
+.header__menu-list 
+	display: flex
+	margin: 0 -20px
+
+.header__menu-item
+	padding: 0 20px
+	display: flex
+	align-items: center
+
+	@include max-w(1100)
+		padding: 0 10px
+
+.header__menu-link
+	font-size: 16px
+	font-weight: $font-weight-bold
+	cursor: pointer
+	transition: color 0.3s ease-in-out
+
+	&:hover
+		color: #b9b9b9
+		transition: color 0.3s ease-in-out
+
+	@include max-w(1100)
+		font-size: 14px
+
+.header__phone
+	display: flex
+	flex-direction: column
+
+.header__phone span
+	font-size: 18px
+	font-weight: $font-weight-black
+
+	@include max-w(1100)
+		font-size: 15px
+
+.header__phone span:first-child
+	margin-bottom: 10px
+
+.header__button
+	width: 180px
+	height: 40px
+	display: flex
+	align-items: center
+	justify-content: center
+	border: 2px solid $color-background
+	font-size: 14px
+	font-weight: $font-weight-semi-bold
+	cursor: pointer
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+
+	&:hover
+		background-color: $color-background
+		color: $color-accent
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+
+	@include max-w(1100)
+		width: 150px
+
+
+
+		

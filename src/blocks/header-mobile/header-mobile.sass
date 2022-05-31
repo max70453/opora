@@ -1,0 +1,85 @@
+.header-mobile
+	padding: 15px 0
+	display: none
+
+	@include max-w(840)
+		display: flex
+		
+.header-mobile__wrap 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    padding: 0 12px
+
+    @include max-w(480)
+        display: none
+
+.header-mobile__logo
+	font-family: "Raleway-Bold"
+	font-size: 25px
+	letter-spacing: 1px
+
+.header-mobile__contacts
+	display: flex
+	align-items: center
+
+.header-mobile__phone
+
+.header-mobile__phone span
+	display: block
+	font-size: 14px
+	margin-right: 10px
+
+.header-mobile__button
+	width: 120px
+	height: 35px
+	display: flex
+	align-items: center
+	justify-content: center
+	border: 2px solid $color-background
+	font-size: 12px
+	font-weight: $font-weight-semi-bold
+	cursor: pointer
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+
+	&:hover
+		background-color: $color-background
+		color: $color-accent
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+
+.header-mobile__menu
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100vh
+	max-width: 250px
+	background-color: $color-background
+	padding: 15px
+	transform: translate(-100%,0)
+	transition: all 0.5s ease-in-out
+	
+.open
+	transform: translate(0,0)
+	transition: all 0.5s ease-in-out
+
+.header-mobile__menu-burger
+	margin-bottom: 15px
+
+.header-mobile__overlay
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	opacity: 0
+	visibility: hidden
+	transition: opacity .5s, visibility .5s, height .5s
+	overflow: hidden
+	background: black
+	z-index: -1
+
+.header-mobile__menu.open ~ .header-mobile__overlay
+	visibility: visible
+	opacity: 0.6

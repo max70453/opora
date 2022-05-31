@@ -1,0 +1,38 @@
+.main-screen
+	position: relative
+	background: linear-gradient(to bottom, rgba(26,26,26,0.7), rgba(26,26,26,0.8)), url('./images/yun-xu-NMFkX8oS8AQ-u.jpg') 
+	background-position: center center
+	background-attachment: scroll
+	background-size: cover
+	background-repeat: no-repeat
+	padding-top: 15%
+	padding-bottom: 11%
+
+.main-screen__content
+	width: 70%
+
+	@include max-w(1024)
+		padding-left: 5%
+
+	@include max-w(768)
+		margin: 0 auto
+
+.main-screen__title
+	font-family: "Raleway-ExtraBold"
+	font-size: px-to-vw(65,1440)
+	color: $color-background
+	text-transform: uppercase
+	margin-bottom: 9.5%
+
+.main-screen__btn
+
+.main-screen__decor
+	content: ""
+	position: absolute
+	display: block
+	background: url("/images/333.svg") no-repeat
+	background-size: cover
+	width: 16%
+	height: 24%
+	right: 7%
+	bottom: -12%
