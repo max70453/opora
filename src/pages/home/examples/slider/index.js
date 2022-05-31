@@ -35,11 +35,9 @@ let Slider = new Swiper('.swiper', {
   breakpoints:{
     320: {
       slidesPerView: 1,
+      slidesPerGroup: 1,
     },
-    741: {
-      slidesPerView: 2,
-    },
-    1091: {
+    580: {
       slidesPerView: 3,
     }
   }

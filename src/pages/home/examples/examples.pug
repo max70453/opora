@@ -42,14 +42,15 @@
 section.examples
   .container
     h2.examples__title.title= title
-    .swiper
-      .swiper-wrapper
-        each slide in slider
-          .swiper-slide
-            .examples__slide-wrap.hover-image-scale
-              a(href=require('/images/slides/' + slide.source)).with-caption.examples__image-link
-                img(src=require('/images/slides/' + slide.source), alt=slide.alt).examples__img.hover-image-scale
-      .swiper-button-prev
-      .swiper-button-next
-      .swiper-pagination
+    .examples__wrap
+      .swiper
+        .swiper-wrapper
+          each slide in slider
+            .swiper-slide
+              .examples__slide-wrap.hover-image-scale
+                a(href=require('/images/slides/' + slide.source)).with-caption.examples__image-link
+                  img(src=require('/images/slides/' + slide.source), alt=slide.alt).examples__img.hover-image-scale
+        .swiper-button-prev
+        .swiper-button-next
+        .swiper-pagination
       

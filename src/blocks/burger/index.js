@@ -6,6 +6,6 @@ export default function burgerMenu(){
     burger.on('click',function(){
         burger.toggleClass("is-active");
         menu.toggleClass('open');
-        menu.find('.burger__line').css('background-color', '#687882');
+        $('body').toggleClass('stop-scroll');
     } )
 };
