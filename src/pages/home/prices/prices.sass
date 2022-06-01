@@ -1,38 +1,45 @@
 .prices
     text-align: center
-    padding: 100px 0
+    padding: 10% 0
 
 .prices__title
-    display: inline-block
     margin: 0 auto
-    margin-bottom: 80px
-
-.prices__content
-    width: 100%
+    margin-bottom: 65px
 
 .prices__row
     width: 100%
     display: flex
 
+.prices__row:not(:last-child)
+  border-bottom: 1px solid #eee
+
+.prices__row:not(:first-child) .prices__left-col
+  border-right: 1px solid #eee
+
 .prices__left-col
-    text-align: left
-    width: 35%
-    padding: 25px 0
-    border: 1px solid #eee
+  text-align: left
+  width: 45%
+  padding: 25px 0
+  padding-left: 10px
 
 .prices__right-col
-    width: 65%
-    text-align: center
-    padding: 25px 0
-    border: 1px solid #eee
+  width: 55%
+  text-align: center
+  padding: 25px 0
 
 .prices__subtitle
-    font-size: 20px
-    line-height: 27px
-    font-weight: 600
-    color: $color-title
+  font-size: 20px
+  line-height: 27px
+  font-weight: 600
+  color: $color-title
 
-.prices1 .layout
+  @include max-w(425)
+    font-size: 17px
+
+.prices__text
+  font-size: 16px
+
+.prices__layout
   display: grid
   height: 100%
   width: 100%
@@ -40,12 +47,10 @@
   grid-template-rows: 50px 1fr
   grid-template-columns: 1fr 1fr 1fr
 
-
-.prices1 input[type="radio"]
+input[type="radio"]
   display: none
 
-
-label.nav
+.prices__nav
   display: flex
   align-items: center
   justify-content: center
@@ -53,305 +58,41 @@ label.nav
   border-bottom: 2px solid $color-accent 
   user-select: none
   transition: background 0.4s, padding-left 0.2s
-  padding-left: 0
   color: $color-title
   font-weight: 700
   font-size: 18px
-  input[type="radio"]
     
-  input[type="radio"]:checked + .page + &
+  input[type="radio"]:checked + .prices__page + &
     background: $color-accent 
-    color: #ffffff
-    padding-left: 20px
-    span
-      padding-left: 20px  
-    
-    svg
-      opacity: 1
-    
-  
-  span
-    padding-left: 0px
-    position: relative
-  svg
-    left: 0
-    top: -3px
-    position: absolute
-    width: 15px
-    opacity: 0
-    transition: opacity 0.2s
+    color: #ffffff 
 
-.prices1 .page
+.prices__page
   grid-column-start: 1
   grid-row-start: 2
   grid-column-end: span 3
-  padding: 0px 20px
-  display: flex
-  align-items: center
 
-.prices1 .page-contents > *
+.prices__page-contents > *
   opacity: 0
   transform: translateY(20px)
   transition: opacity 0.2s, transform 0.2s
-  @for $c from 1 through 20
+  @for $c from 1 through 10
     &:nth-child(#{$c})
       transition-delay: 0.2s + ($c * 0.2s)
 
-.prices1 input[type="radio"] + .page
+input[type="radio"] + .prices__page
   transition: transform 0.2s
   transform: translateX(100%)
 
-
-.prices1 input[type="radio"]:checked + .page
+input[type="radio"]:checked + .prices__page
   transform: translateX(0%)
-  .page-contents > *
+  .prices__page-contents > *
     opacity: 1
     transform: translateY(0px)
 
-.prices1 .page-contents
-  max-width: 100%
-  width: 968px
-  padding-top: 50px
+.prices__page-contents
+  width: 100%
+  max-width: 970px
+  padding-top: 30px
   margin: 0 auto
 
-.page-contents h1 
-    color: $color-title
-    margin-bottom: 20px
 
-.tabs 
-  left: 50%
-  transform: translateX(-50%)
-  position: relative
-  background: white
-  padding: 50px
-  padding-bottom: 80px
-  width: 100%
-  height: 250px
-  border-radius: 5px
-  min-width: #{$tab-count * 60px}
-  input[name="tab-control"] 
-    display: none
-  
-  
-  .content section h2,
-  ul li label 
-    font-family: "Montserrat"
-    font-weight: bold
-    font-size: 18px
-    color: $accent
-
-  .content section
-      width: 70%
-      margin: 0 auto
-  
-  ul 
-    list-style-type: none
-    padding-left: 0
-    display: flex
-    flex-direction: row
-    margin-bottom: 10px
-    justify-content: space-between
-    align-items: flex-end
-    flex-wrap: wrap
-    
-    li 
-      box-sizing: border-box
-      flex: 1
-      width: #{100%/$tab-count}
-      padding: 0 10px
-      text-align: center
-      
-      label 
-        transition: all 0.3s ease-in-out
-        color: $secondary
-        padding: 5px auto
-        overflow: hidden
-        text-overflow: ellipsis
-        display: block
-        cursor: pointer
-        transition: all 0.2s ease-in-out
-        white-space: nowrap
-        -webkit-touch-callout: none
-        // @include user-select(none)
-        
-        br 
-          display: none
-        
-        
-        svg 
-          fill: $secondary
-          height: 1.2em
-          vertical-align: bottom
-          margin-right: 0.2em
-          transition: all 0.2s ease-in-out
-        
-        
-        &:hover,
-        &:focus,
-        &:active 
-          outline: 0
-          color: lighten($secondary, 15%)
-          svg 
-            fill: lighten($secondary, 15%)
-          
-  
-  .slider 
-    position: relative
-    width: #{100%/$tab-count}
-    transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07)
-    .indicator 
-      position: relative
-      width: $indicator-width
-      max-width: 100%
-      margin: 0 auto
-      height: $indicator-height
-      background: $accent
-      border-radius: 1px
-
-  
-  
-  .content 
-    margin-top: 30px
-    
-    section 
-      display: none
-      animation: 
-        name: content
-        direction: normal
-        duration: 0.3s
-        timing-function: ease-in-out
-        iteration-count: 1
-      
-      line-height: 1.4
-      
-      h2 
-        color: $accent
-        display: none
-        &::after 
-          content: ""
-          position: relative
-          display: block
-          width: 30px
-          height: 3px
-          background: $accent
-          margin-top: 5px
-          left: 1px
-  
-  input[name="tab-control"] 
-    @include tabs 
-      > label 
-        cursor: default
-        color: $accent
-        
-        svg 
-          fill: $accent
-        
-        
-        @media (max-width: map-get($breakpoints, small)) 
-          background: rgba(0, 0, 0, 0.08)
-
-  @keyframes content 
-    from 
-      opacity: 0
-      transform: translateY(5%)
-    
-    to 
-      opacity: 1
-      transform: translateY(0%)
-  
-  @media (max-width: map-get($breakpoints, medium)) 
-    ul li label 
-      white-space: initial
-      
-      br 
-        display: initial
-      
-      
-      svg 
-        height: 1.5em
-  
-  @media (max-width: map-get($breakpoints, small)) 
-    ul li label 
-      padding: 5px
-      border-radius: 5px
-      
-      span 
-        display: none
-    .slider 
-      display: none
-
-    
-    .content 
-      margin-top: 20px
-      section h2
-        display: block
-
-
-
-
-
-
-.tabss
-  display: block
-  display: -webkit-flex
-  display: -moz-flex
-  display: flex
-  -webkit-flex-wrap: wrap
-  -moz-flex-wrap: wrap
-  flex-wrap: wrap
-  margin: 0
-  overflow: hidden
-.tabss [class^="tab"] label,
-.tabss [class*=" tab"] label 
-    color: #efedef
-    cursor: pointer
-    display: block
-    font-size: 1.1em
-    font-weight: 300
-    line-height: 1em
-    padding: 2rem 0
-    text-align: center
-.tabss [class^="tab"] [type="radio"],
-.tabss [class*=" tab"] [type="radio"] 
-    border-bottom: 1px solid rgba(239, 237, 239, 0.5)
-    cursor: pointer
-    -webkit-appearance: none
-    -moz-appearance: none
-    appearance: none
-    display: block
-    width: 100%
-    -webkit-transition: all 0.3s ease-in-out
-    -moz-transition: all 0.3s ease-in-out
-    -o-transition: all 0.3s ease-in-out
-    transition: all 0.3s ease-in-out
-.tabss [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
-.tabss [class*=" tab"] [type="radio"]:hover,
-.tabss [class*=" tab"] [type="radio"]:focus 
-    border-bottom: 1px solid #fd264f
-.tabss [class^="tab"] [type="radio"]:checked,
-.tabss [class*=" tab"] [type="radio"]:checked 
-    border-bottom: 2px solid #fd264f
-.tabss [class^="tab"] [type="radio"]:checked + div,
-.tabss [class*=" tab"] [type="radio"]:checked + div 
-    opacity: 1
-.tabss [class^="tab"] [type="radio"] + div,
-.tabss [class*=" tab"] [type="radio"] + div 
-    display: block
-    opacity: 0
-    padding: 2rem 0
-    width: 90%
-    -webkit-transition: all 0.3s ease-in-out
-    -moz-transition: all 0.3s ease-in-out
-    -o-transition: all 0.3s ease-in-out
-    transition: all 0.3s ease-in-out
-.tabss .tab-2
-    width: 50%
-.tabss .tab-2 [type="radio"] + div 
-    width: 200%
-    margin-left: 200%
-.tabss .tab-2 [type="radio"]:checked + div 
-    margin-left: 0
-.tabss .tab-2:last-child [type="radio"] + div 
-    margin-left: 100%
-.tabss .tab-2:last-child [type="radio"]:checked + div 
-    margin-left: -100%
