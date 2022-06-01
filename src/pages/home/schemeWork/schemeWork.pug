@@ -4,26 +4,22 @@
       {
         source: "bell.svg",
         alt: "bell icon",
-        title: "Звонок или заявка",
-        number: 1
+        title: "Звонок или заявка"
       },
       {
         source: "measurements_1.svg",
         alt: "measurements_1 icon",
-        title: "Замер",
-        number: 2
+        title: "Замер"
       },
       {
         source: "money.svg",
         alt: "money icon",
-        title: "Оплата удобным способом",
-        number: 3
+        title: "Оплата удобным способом"
       },
       {
         source: "Clean.svg",
         alt: "Clean icon",
-        title: "Монтаж в кратчайшие срокипосле оплаты",
-        number: 4
+        title: "Монтаж в кратчайшие сроки после оплаты"
       }
   ];
 
@@ -31,13 +27,13 @@ section.scheme-work
   .container
     h2.scheme-work__title.title= title
     .scheme-work__wraper
-      each item in schemeItems
+      each item, index in schemeItems
         .scheme-work__item
-          .scheme-work__mainblock
+          div(class=index % 2 ? 'right' : 'left').scheme-work__mainblock
             .scheme-work__center
               .scheme-work__line
               .scheme-work__circle
-                .scheme-work__number= item.number
+                .scheme-work__number= index+1
               img(src=require("/images/icons/" + item.source), alt=item.alt).scheme-work__img
               .scheme-work__name= item.title
 

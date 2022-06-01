@@ -1,11 +1,12 @@
 .scheme-work
-  padding: 15% 0
+  padding: 10% 0
   
 .scheme-work__title
   text-align: center
   margin-bottom: 6%
 
 .scheme-work__wraper
+  margin-bottom: -10%
 
 .scheme-work__item
   padding-bottom: 70px
@@ -15,22 +16,39 @@
   margin: 0 auto
   max-width: 860px
 
+.left
+  display: flex
+  justify-content: flex-start
+
+.right
+  display: flex
+  justify-content: flex-end
+
+  @include max-w(490)
+    justify-content: flex-start
+
 .scheme-work__center
   width: 50%
   text-align: center
 
 .scheme-work__line
   width: 1px
+  height: 100%
   background-color: rgb(143, 143, 143)
   top: 95px
   position: absolute
   width: 1px
-  // top: 0
   background: #222
   bottom: 0
   left: 0
   right: 0
   margin: 0 auto
+
+  @include max-w(490)
+    left: 15%
+
+.scheme-work__item:last-child .scheme-work__line
+  height: 0
 
 .scheme-work__circle
   border-width: 2px
@@ -42,11 +60,12 @@
   position: absolute
   right: 0
   left: 0
-  // top: 5px
   margin: 0 auto
-  // background-color: #222
   border-radius: 100%
   border: 2px solid #fff
+
+  @include max-w(490)
+    left: 15%
 
 .scheme-work__number
   color: #fff
@@ -60,6 +79,7 @@
   margin: 0 auto 14px
   
 .scheme-work__name
+  font-family: "Raleway-Bold"
   font-size: 22px
   line-height: 1.35
   margin-bottom: 6px
