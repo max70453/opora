@@ -9,6 +9,7 @@ import initLayout from './layout';
 import initBlocks from './blocks';
 import initPages from './pages';
 import burgerMenu from './blocks/burger';
+import toggleHeader from './layout/header';
 import slider from './pages/home/examples/slider';
 import popup from './pages/home/examples/popup';
 
@@ -17,6 +18,7 @@ $(() => {
   initBlocks();
   initPages();
   burgerMenu();
+  toggleHeader();
   slider;
   popup;
   
