@@ -4,5 +4,6 @@ import './main';
 import './adwantages';
 import './examples';
 import './prices';
+import './schemeWork';
 
 export default () => {};
