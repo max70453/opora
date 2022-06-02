@@ -91,20 +91,34 @@
 	padding: 15px 0
 	box-shadow: rgba(0, 0, 0, .1) 0px 1px 3px 
  
-	.header__wrap
+	.header__wrap,
+	.header-mobile__wrap
 		color: $color-title
 
-	.header__logo
+	.header__logo,
+	.header-mobile__logo
 		color: $color-accent
 		cursor: pointer
 
-	.header__button
+	.header__button,
+	.header-mobile__button
 		color: $color-background
 		background-color: $color-accent
 
 		&:hover
 			background-color: #0f8b99
 			transition: background-color 0.2s
+
+	.burger__line
+		background-color: #000
+
+	@include max-w(480)
+		background-color: transparent
+		box-shadow: none
+
+		.burger__line
+			background-color: $color-accent
+		
 
 
 
