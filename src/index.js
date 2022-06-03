@@ -21,6 +21,5 @@ $(() => {
   toggleHeader();
   slider;
   popup;
-  
 });
 

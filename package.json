@@ -34,6 +34,7 @@
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
     "html-loader": "^3.1.0",
+    "intl-tel-input": "^17.0.16",
     "jquery": "^3.6.0",
     "magnific-popup": "^1.1.0",
     "node-sass": "^5.0.0",

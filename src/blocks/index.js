@@ -5,6 +5,7 @@ import './btn-accent';
 import './header-mobile';
 import './mobile-menu';
 import './burger';
+import './phone-select';
 
 export default () => {
   console.log('init blocks');
