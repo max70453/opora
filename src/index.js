@@ -5,6 +5,7 @@ import $ from 'jquery';
 // import 'bootstrap/scss/bootstrap.scss';
 
 import './fonts';
+import '@fortawesome/fontawesome-free/js/all'
 import initLayout from './layout';
 import initBlocks from './blocks';
 import initPages from './pages';
