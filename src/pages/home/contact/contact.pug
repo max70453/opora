@@ -1,0 +1,31 @@
+- var title = 'СВЯЖИТЕСЬ С НАМИ';
+- var subtitle = "Отправьте заявку с нашего сайта и получите скидку -10% на первый заказ";
+- var button = "Вызвать замерщика";
+- var num1 = "8 (921) 809 90 48";
+- var num2 = "8 (995) 590 70 15";
+- var addr = "Санкт-Петербург";
+- var grafikTitle = "График работы:";
+- var grafikTxt = "Пн-Пт, 8:00-22:00";
+
+doctype html
+html(lang="en")
+  head 
+    title= pageTitle
+    link(rel="stylesheet", href="index.css")
+    script(src='main.js')
+  body
+    section.contact
+      .container
+        h2.contact__title.title= title
+        .contact__subtitle= subtitle
+        form(action="").contact__form
+          .contact__inputs-wrapper
+            .contact__input-wrap
+              input(type="email", value, placeholder="Ваш e-mail").contact__input
+            .contact__input-wrap
+              input(type="name", value, placeholder="Ваше имя").contact__input
+            .contact__input-wrap
+              input(id="phone" type="tel").contact__input.phone-select
+            .contact__input-wrap
+              button(type="submit").contact__input-submit.btn-accent= button 
+      .contact__dec-element

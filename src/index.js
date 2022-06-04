@@ -24,6 +24,5 @@ $(() => {
   policyPopup();
   slider;
   popup;
-  
 });
 

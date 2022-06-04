@@ -5,5 +5,6 @@ import './adwantages';
 import './examples';
 import './prices';
 import './schemeWork';
+import './contact';
 
 export default () => {};
