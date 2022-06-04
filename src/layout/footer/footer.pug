@@ -79,7 +79,7 @@ footer.footer
                 .footer__phone
                     .footer__phone-num 8 (921) 809-90-48
                     .footer__phone-num 8 (921) 809-90-48
-                a(href="#policy-popup").footer__policy.policy-popup Политика конфиденциальности
+                a(href="#policy-popup").popup-with-zoom-anim.footer__policy.policy-popup Политика конфиденциальности
             .footer__col
                 .footer__socials-wrap
                     .footer__socials
@@ -98,15 +98,15 @@ footer.footer
             .footer__copyrights &copy; 2019 
 
 
-.policy-popup.mfp-hide(id="policy-popup")
-    .policy-popup__content 
-        h2.policy-popup__title Политика в отношении обработки персональных данных
-        ol.policy-popup__list
-            each item in policy
-                li.policy-popup__item=item.name
-                    p.policy-popup__item-text=item.descr
-                    ol.policy-popup__list  
-                        each par in item.list
-                            li.policy-popup__item=par
+.zoom-anim-dialog.mfp-hide(id="policy-popup") 
+    h2.policy-popup__title Политика в отношении обработки персональных данных
+    ol.policy-popup__list
+        each item in policy
+            li.policy-popup__item=item.name
+                p.policy-popup__item-text=item.descr
+                ol.policy-popup__list  
+                    each par in item.list
+                        li.policy-popup__item=par
+
 
 

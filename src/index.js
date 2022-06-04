@@ -13,6 +13,7 @@ import burgerMenu from './blocks/burger';
 import toggleHeader from './layout/header';
 import slider from './pages/home/examples/slider';
 import popup from './pages/home/examples/popup';
+import policyPopup from './blocks/policy-popup';
 
 $(() => {
   initLayout();
@@ -20,6 +21,7 @@ $(() => {
   initPages();
   burgerMenu();
   toggleHeader();
+  policyPopup();
   slider;
   popup;
   
