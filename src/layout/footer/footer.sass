@@ -1,6 +1,5 @@
 .footer
   width: 100%
-  background-color: $color-title
   color: $color-background 
   padding-top: 4%
   flex-grow: 0
@@ -10,7 +9,7 @@
 .footer__content
   display: flex
   flex-wrap: wrap
-  padding-bottom: 25px
+  padding-bottom: 15px
   border-bottom: 1px solid rgba(255, 255, 255, .2)
 
   @include max-w(768)
@@ -19,6 +18,7 @@
 .footer .footer__col
   width: calc( 100% / 3 ) 
   display: flex
+  justify-content: center
   flex-direction: column
 
   @include max-w(768)

@@ -1,5 +1,5 @@
 .contact
-  padding: 10% 0
+  padding-top: 10% 
   color: #fff
   background: linear-gradient(to bottom, rgba(26,26,26,0.7), rgba(26,26,26,0.8)), url('./images/nelson-wong.jpg')
   background-repeat: no-repeat
@@ -12,15 +12,12 @@
 
 .contact__title
   color: #fff
-  font-size: 56px
+  font-size: px-to-vw(56,1440)
   margin-bottom: 47px
 
   @include max-w(660)
-    font-size: 48px
+    font-size: 35px
     margin-bottom: 30px
-
-  @include max-w(400)
-    font-size: 32px
 
 .contact__subtitle
   font-size: 17px
@@ -43,9 +40,10 @@
 .contact__input-wrap
   width: 250px
   padding-right: 10px
+  margin-bottom: 10px
 
-  @include max-w(1070)
-    margin-bottom: 10px
+.contact__form
+  margin-bottom: 3%
 
 .contact__input
   width: 100%
@@ -68,23 +66,17 @@
   border: none
 
 .contact__dec-element
-  background: url("/images/1111.png")
-  background-repeat: no-repeat
-  width: 23%
-  height: 34%
-  top: 0
-  left: 65%
   position: absolute
+  display: block
+  background: url("/images/111.svg") no-repeat center 
+  background-size: cover
+  width: 19%
+  height: 22%
+  top: 0
+  right: 11%
 
-  @include max-w(1070)
-    width: 26%
-    height: 20%
+  @include max-w(768)
+    display: none
 
-  @include max-w(950)
-    width: 36%
-    height: 18%
-
-  @include max-w(800)
-    opacity: 0
   
 

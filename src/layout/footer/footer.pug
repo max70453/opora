@@ -65,40 +65,37 @@
     ];
 
 footer.footer
-    .container
-        .footer__logo моя опора
-        .footer__content
-            .footer__col
-                .footer__company-info 
-                    .footer__company-info-text
-                        span.footer__address Санкт-Петербург
-                        span.footer__work-hours График работы: 
-                            br 
-                            |Пн-Пт, 8:00-22:00
-            .footer__col
-                .footer__phone
-                    .footer__phone-num 8 (921) 809-90-48
-                    .footer__phone-num 8 (921) 809-90-48
-                a(href="#policy-popup").popup-with-zoom-anim.footer__policy.policy-popup Политика конфиденциальности
-            .footer__col
-                .footer__socials-wrap
-                    .footer__socials
-                        a(href="#").footer__social-link
-                            i.fab.fa-facebook-f.fa-lg.footer__socials-img
-                        a(href="#").footer__social-link
-                            i.fab.fa-whatsapp.fa-lg.footer__socials-img
-                        a(href="#").footer__social-link
-                            i.fab.fa-vk.fa-lg.footer__socials-img
-                        a(href="#").footer__social-link
-                            i.fab.fa-telegram.fa-lg.footer__socials-img
-                        a(href="#").footer__social-link
-                            i.fab.fa-viber.fa-lg.footer__socials-img 
-                    a.footer__btn.btn-accent Вызвать замерщика
-        .footer__bottom-wrapper
-            .footer__copyrights &copy; 2019 
+    .footer__content
+        .footer__col
+            .footer__company-info 
+                .footer__company-info-text
+                    span.footer__address Санкт-Петербург
+                    span.footer__work-hours График работы: 
+                        br 
+                        |Пн-Пт, 8:00-22:00
+        .footer__col
+            .footer__phone
+                .footer__phone-num 8 (921) 809-90-48
+                .footer__phone-num 8 (921) 809-90-48
+            a(href="#policy-popup").popup-with-zoom-anim.footer__policy.policy-popup Политика конфиденциальности
+        .footer__col
+            .footer__socials-wrap
+                .footer__socials
+                    a(href="#").footer__social-link
+                        i.fab.fa-facebook-f.fa-lg.footer__socials-img
+                    a(href="#").footer__social-link
+                        i.fab.fa-whatsapp.fa-lg.footer__socials-img
+                    a(href="#").footer__social-link
+                        i.fab.fa-vk.fa-lg.footer__socials-img
+                    a(href="#").footer__social-link
+                        i.fab.fa-telegram.fa-lg.footer__socials-img
+                    a(href="#").footer__social-link
+                        i.fab.fa-viber.fa-lg.footer__socials-img 
+    .footer__bottom-wrapper
+        .footer__copyrights &copy; 2019 
 
 
-.zoom-anim-dialog.mfp-hide(id="policy-popup") 
+.zoom-anim-dialog.mfp-hide(id="policy-popup" data-simplebar) 
     h2.policy-popup__title Политика в отношении обработки персональных данных
     ol.policy-popup__list
         each item in policy

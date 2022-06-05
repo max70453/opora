@@ -54,6 +54,7 @@
     "regenerator-runtime": "^0.13.7",
     "sass-loader": "^11.0.1",
     "sass-resources-loader": "^2.2.1",
+    "simplebar": "^5.3.8",
     "style-loader": "^2.0.0",
     "svg-inline-loader": "^0.8.2",
     "svgo": "^2.3.0",

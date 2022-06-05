@@ -25,7 +25,10 @@ html(lang="en")
             .contact__input-wrap
               input(type="name", value, placeholder="Ваше имя").contact__input
             .contact__input-wrap
-              input(id="phone" type="tel").contact__input.phone-select
+              input(id="phone" type="tel").contact__input.phone-select.phone-select__footer
+              <span id="valid-msg" class="hide">✓ Valid</span>
+              <span id="error-msg" class="hide"></span>
             .contact__input-wrap
-              button(type="submit").contact__input-submit.btn-accent= button 
+              button(type="submit").contact__input-submit.btn-accent= button
+        include /layout/footer/footer 
       .contact__dec-element
