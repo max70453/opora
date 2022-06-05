@@ -7,6 +7,7 @@ import './mobile-menu';
 import './burger';
 import './policy-popup'; 
 import './phone-select';
+import './contact-popup';
 
 export default () => {
   console.log('init blocks');

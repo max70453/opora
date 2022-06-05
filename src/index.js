@@ -16,6 +16,7 @@ import popup from './pages/home/examples/popup';
 import policyPopup from './blocks/policy-popup';
 import 'simplebar';
 import 'simplebar/dist/simplebar.css';
+import contactPopup from './blocks/contact-popup';
 
 $(() => {
   initLayout();
@@ -26,5 +27,6 @@ $(() => {
   policyPopup();
   slider;
   popup;
+  contactPopup();
 });
 
