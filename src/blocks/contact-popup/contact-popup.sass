@@ -1,12 +1,16 @@
 .iti--allow-dropdown
   width: 100%
-  
-.cotact-popup__wrap
-  margin: 0 auto
+
+.contact-popup
+  max-height: 80%
+  margin: auto
   padding: 40px 45px
   width: 50%
   text-align: center
   background: #fff
+
+  @include max-w(768)
+    width: 90%
 
 .contact-popup__title
   color: #263d4c
@@ -54,8 +58,8 @@
   border: none
 
 .contact-popup__policy
-  font-size: 14px
-  color: #383838
+  font-size: 14px 
 
-.contact-opup__policy-link
-  border-bottom: 1px solid rgb(31, 164, 178)
+.contact-popup__policy-link
+  border-bottom: 2px solid $color-accent
+  color: #383838

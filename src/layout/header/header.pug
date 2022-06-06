@@ -17,7 +17,7 @@ header.header.header__desctop
 			.header__phone
 				span 8 (921) 809-90-48
 				span 8 (995) 590-70-15
-			a.header__button.popup-with-form(href="#test-form") Связаться с нами
+			a.header__button.popup-btn-js(href="#contact-popup") Связаться с нами
 
 header.header.header-mobile
 	button.burger 
@@ -30,7 +30,7 @@ header.header.header-mobile
 			.header-mobile__phone
 				span 8 (921) 809-90-48
 				span 8 (995) 590-70-15
-			a.header-mobile__button Связаться с нами
+			a.header-mobile__button.popup-btn-js(href="#contact-popup") Связаться с нами
 	.header-mobile__menu 
 		button.burger.header-mobile__menu-burger
 			span.burger__line
@@ -53,25 +53,25 @@ header.header.header-mobile
 			.mobile-menu__phone 
 				.mobile-menu__phone-num 8 (921) 809-90-48
 				.mobile-menu__phone-num 8 (995) 590-70-15
-			a.btn-accent.mobile-menu-btn Связаться с нами
+			a.btn-accent.mobile-menu-btn.popup-btn-js(href="#contact-popup") Связаться с нами
 	.header-mobile__overlay
 
 
-.mfp-hide.white-popup-block(id="test-form", data-effect="mfp-move-from-top")
-	.cotact-popup__wrap
-		h2.contact-popup__title Свяжитесь с нами
-		.contact-popup__subtitle Наш менеджер ответит на все интересующие вас вопросы
-		.contact-popup__inpbox
-			.contact-popup__inpblock
-				input(type="name", autocomplete="name", name="Name", value placeholder="Ваше имя").contact-popup__input
-			.contact-popup__inpblock
-				input(id="phone", type="tel").contact-popup__input.phone-select
-			.contact-popup__inpblock
-				textarea(name="Textarea", placeholder="Комментарий/Вопрос", row="3").contact-popup__input.contact-popup__textarea
-			.contact-popup__inpblock
-				button(type="submit").contact-popup__input-submit.btn-accent Связаться
-			.contact-popup__policy Нажимая на кнопку вы соглашаетесь с 
-				a(href="#policy-popup").contact-popup__policy-link политикой конфиденциальности
+.mfp-hide.contact-popup(id="contact-popup")
+	h2.contact-popup__title Свяжитесь с нами
+	.contact-popup__subtitle Наш менеджер ответит на все интересующие вас вопросы
+	.contact-popup__inpbox
+		.contact-popup__inpblock
+			input(id="name" type="name", autocomplete="name", name="Name", value placeholder="Ваше имя").contact-popup__input
+		.contact-popup__inpblock.input-wrap-js
+			input(id="phone-header" type="tel").contact-popup__input.phone-select.phone-select__popup
+			<span id="error-msg" class="hide error-msg"></span>
+		.contact-popup__inpblock
+			textarea(name="Textarea", placeholder="Комментарий/Вопрос", row="3").contact-popup__input.contact-popup__textarea
+		.contact-popup__inpblock
+			button(type="submit").contact-popup__input-submit.btn-accent Связаться
+		.contact-popup__policy Нажимая на кнопку, вы соглашаетесь с 
+			a(href="policy.html" target="_blanc").contact-popup__policy-link.policy-popup политикой конфиденциальности
 				
 		
 				

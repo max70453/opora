@@ -7,28 +7,21 @@
 - var grafikTitle = "График работы:";
 - var grafikTxt = "Пн-Пт, 8:00-22:00";
 
-doctype html
-html(lang="en")
-  head 
-    title= pageTitle
-    link(rel="stylesheet", href="index.css")
-    script(src='main.js')
-  body
-    section.contact
-      .container
-        h2.contact__title.title= title
-        .contact__subtitle= subtitle
-        form(action="").contact__form
-          .contact__inputs-wrapper
-            .contact__input-wrap
-              input(type="email", value, placeholder="Ваш e-mail").contact__input
-            .contact__input-wrap
-              input(type="name", value, placeholder="Ваше имя").contact__input
-            .contact__input-wrap
-              input(id="phone" type="tel").contact__input.phone-select.phone-select__footer
-              <span id="valid-msg" class="hide">✓ Valid</span>
-              <span id="error-msg" class="hide"></span>
-            .contact__input-wrap
-              button(type="submit").contact__input-submit.btn-accent= button
-        include /layout/footer/footer 
-      .contact__dec-element
+
+section.contact
+  .container
+    h2.contact__title.title= title
+    .contact__subtitle= subtitle
+    form(action="").contact__form
+      .contact__inputs-wrapper
+        .contact__input-wrap
+          input(type="email", value, placeholder="Ваш e-mail").contact__input
+        .contact__input-wrap
+          input(type="name", value, placeholder="Ваше имя").contact__input
+        .contact__input-wrap.input-wrap-js
+          input(id="phone-footer" type="tel").contact__input.phone-select.phone-select__footer
+          <span id="error-msg" class="hide error-msg"></span>
+        .contact__input-wrap
+          button(type="submit").contact__input-submit.btn-accent= button
+    include /layout/footer/footer 
+  .contact__dec-element

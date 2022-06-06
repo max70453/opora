@@ -1,27 +1,26 @@
-#policy-popup
+.policy
     background: white
     padding: 20px 30px
-    text-align: left
-    max-width: 90%
-    max-height: 80vh
-    overflow-y: scroll
-    margin: 40px auto
-    position: relative 
+    font-family: $font-family-base
 
-.policy-popup__title
+.policy__title
+    color: #000
     font-weight: 600
     margin-bottom: 30px
 
-.policy-popup__list
+    @inlude max-w(768)
+        font-size: 18px
+
+.policy__list
     padding: 0 25px
 
     @inlude max-w(450)
         padding: 0 10px
 
-.policy-popup__item-text
+.policy__item-text
     padding: 10px 0
 
-.policy-popup__item
+.policy__item
     margin-bottom: 20px
 
 .mfp-bg,
