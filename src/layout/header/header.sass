@@ -38,7 +38,11 @@
 	@include max-w(1100)
 		padding: 0 10px
 
+.header__menu-link.active 
+	color: orange
+
 .header__menu-link
+	color: $color-background
 	font-size: 16px
 	font-weight: $font-weight-bold
 	cursor: pointer
@@ -94,6 +98,13 @@
 	background-color: $color-background
 	padding: 15px 0
 	box-shadow: rgba(0, 0, 0, .1) 0px 1px 3px 
+
+	.header__menu-link
+		color: #263d4c
+
+		&:hover
+			color: #b9b9b9
+			transition: color 0.3s ease-in-out
  
 	.header__wrap,
 	.header-mobile__wrap

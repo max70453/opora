@@ -1,4 +1,13 @@
 import './header.sass';
+import ScrollNavigation from 'scroll-navigation-menu';
+ 
+const scrollNavigation = new ScrollNavigation({
+  animationDuration: 233,
+  activeClass: 'active',
+  linksSelector: '.scroll',
+  offset: 0,
+});
+scrollNavigation.start();
 
 export default function toggleHeader(){
     $(window).on('scroll', function(){
@@ -19,5 +28,3 @@ export default function toggleHeader(){
         
 }); 
 }
-
-

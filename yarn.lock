@@ -7416,6 +7416,11 @@ schema-utils@^3.0.0:
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
+scroll-navigation-menu@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/scroll-navigation-menu/-/scroll-navigation-menu-0.1.7.tgz#daf13798927d7bed3991142b0b902cb5ddd5427b"
+  integrity sha512-OIelnfariz6rFyADNnDhFFs8Oj6+oE8mj4NYqgkZlF3i5BSXakxXVS9T2Tw6p+E7ijajx7A/BRrMX82sH3l5fw==
+
 scss-tokenizer@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
