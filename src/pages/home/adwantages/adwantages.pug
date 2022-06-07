@@ -41,11 +41,11 @@
 
 .container
   section.advantages(id="advantages")
-    h2.advantages__title.title= title
+    h2.advantages__title.title(data-wow-duration="1s").wow.animated.animate__fadeIn= title
     .advantages__cards
       each item in cardValue
         .advantages__card-wrap
-          .card
+          .card(data-wow-duration="1.5s").wow.animated.animate__fadeInLeft
             .advantages__card-img
               img(src=require('/images/icons/' + item.source) alt=item.alt)
             .advantages__card-title= item.cardTitle

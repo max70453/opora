@@ -18,7 +18,17 @@ import slider from './pages/home/examples/slider';
 import popup from './pages/home/examples/popup';
 import contactPopup from './blocks/contact-popup';
 
-new WOW().init({
+
+$(() => {
+  initLayout();
+  initBlocks();
+  initPages();
+  burgerMenu();
+  toggleHeader();
+  slider;
+  popup;
+  contactPopup();
+  new WOW().init({
     boxClass:     'wow',      // animated element css class (default is wow)
     animateClass: 'animated', // animation css class (default is animated)
     offset:       0,          // distance to the element when triggering the animation (default is 0)
@@ -29,16 +39,7 @@ new WOW().init({
       // the argument that is passed in is the DOM node being animated
     },
     scrollContainer: null,    // optional scroll container selector, otherwise use window,
-    resetAnimation: true,     // reset animation on end (default is true)
+    resetAnimation: false,     // reset animation on end (default is true)
 });
-$(() => {
-  initLayout();
-  initBlocks();
-  initPages();
-  burgerMenu();
-  toggleHeader();
-  slider;
-  popup;
-  contactPopup();
 });
 
