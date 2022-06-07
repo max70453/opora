@@ -25,7 +25,7 @@
 
 section.scheme-work(id="schema")
   .container
-    h2.scheme-work__title.title= title
+    h2.scheme-work__title.title(data-wow-duration="1s").wow.animated.animate__fadeIn= title
     .scheme-work__wraper
       each item, index in schemeItems
         .scheme-work__item
@@ -34,8 +34,9 @@ section.scheme-work(id="schema")
               .scheme-work__line
               .scheme-work__circle
                 .scheme-work__number= index+1
-              img(src=require("/images/icons/" + item.source), alt=item.alt).scheme-work__img
-              .scheme-work__name= item.title
+              div(data-wow-duration="2s" data-wow-offset="-20").wow.animated.animate__fadeInUpBig.animate__delay-0.1s
+                img(src=require("/images/icons/" + item.source), alt=item.alt).scheme-work__img
+                .scheme-work__name= item.title
 
             
     

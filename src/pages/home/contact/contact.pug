@@ -10,8 +10,8 @@
 
 section.contact(id="contact")
   .container
-    h2.contact__title.title= title
-    .contact__subtitle= subtitle
+    h2.contact__title.title(data-wow-duration="1s").wow.animated.animate__fadeInLeft.animate__delay-0.1s= title
+    .contact__subtitle(data-wow-duration="2s").wow.animated.animate__fadeInLeft.animate__delay-0.1s= subtitle
     form(action="").contact__form
       .contact__inputs-wrapper
         .contact__input-wrap
