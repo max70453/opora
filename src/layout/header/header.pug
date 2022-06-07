@@ -1,6 +1,6 @@
 header.header.header__desctop 
 	.container
-		.header__wrap
+		.header__wrap.wow.animated.animate__fadeIn(data-wow-duration="1s")
 			.header__logo моя опора
 			nav.header__menu
 				ul.header__menu-list 
@@ -57,7 +57,7 @@ header.header.header-mobile
 	.header-mobile__overlay
 
 
-.mfp-hide.contact-popup(id="contact-popup")
+.mfp-hide.contact-popup(id="contact-popup", data-wow-duration="0.5s").wow.animated.animate__fadeInDown
 	h2.contact-popup__title Свяжитесь с нами
 	.contact-popup__subtitle Наш менеджер ответит на все интересующие вас вопросы
 	.contact-popup__inpbox
