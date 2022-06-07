@@ -2,7 +2,7 @@ import './header.sass';
 import ScrollNavigation from 'scroll-navigation-menu';
  
 const scrollNavigation = new ScrollNavigation({
-  animationDuration: 233,
+  animationDuration: 1000,
   activeClass: 'active',
   linksSelector: '.scroll',
   offset: 0,

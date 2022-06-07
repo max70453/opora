@@ -7,6 +7,7 @@
 	background-color: transparent
 	color: $color-background
 	z-index: 2000
+	transition: background-color 0.2s
 
 	@include max-w(840)
 		display: none
@@ -98,6 +99,16 @@
 	background-color: $color-background
 	padding: 15px 0
 	box-shadow: rgba(0, 0, 0, .1) 0px 1px 3px 
+	animation: slide-down 0.7s
+
+	@keyframes slide-down 
+		0% 
+			opacity: 0
+			transform: translateY(-100%)
+		
+		100% 
+			opacity: 1
+			transform: translateY(0)
 
 	.header__menu-link
 		color: #263d4c
@@ -134,7 +145,6 @@
 
 		.burger__line
 			background-color: $color-accent
-		
 
 
 
