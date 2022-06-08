@@ -186,7 +186,7 @@ const config = {
             loader: 'file-loader',
             options: {
               name: `${PATH_BASE}images/[name]-[hash:8].[ext]`,
-              publicPath: IS_PRODUCTION ? './' : undefined,
+              publicPath: './',
               esModule: false,
             },
           },
