@@ -12,15 +12,15 @@ section.contact(id="contact")
   .container
     h2.contact__title.title(data-wow-duration="1s").wow.animated.animate__fadeInLeft.animate__delay-0.1s= title
     .contact__subtitle(data-wow-duration="2s").wow.animated.animate__fadeInLeft.animate__delay-0.1s= subtitle
-    form(action="").contact__form
+    form(action="mail.php").contact__form
       .contact__inputs-wrapper
         .contact__input-wrap
-          input(type="email", value, placeholder="Ваш e-mail").contact__input
+          input(type="email", name="email", placeholder="Ваш e-mail").contact__input
         .contact__input-wrap
-          input(type="name", value, placeholder="Ваше имя").contact__input
+          input(type="text", name="name", placeholder="Ваше имя").contact__input
         .contact__input-wrap.input-wrap-js
-          input(id="phone-footer" type="tel").contact__input.phone-select.phone-select__footer
-          <span id="error-msg" class="hide error-msg"></span>
+          input(id="phone-footer" type="tel" name="phone").contact__input.phone-select.phone-select__footer
+          span.hide.error-msg
         .contact__input-wrap
           button(type="submit").contact__input-submit.btn-accent= button
     include /layout/footer/footer 
