@@ -12,12 +12,12 @@ section.contact(id="contact")
   .container
     h2.contact__title.title(data-wow-duration="1s").wow.animated.animate__fadeInLeft.animate__delay-0.1s= title
     .contact__subtitle(data-wow-duration="2s").wow.animated.animate__fadeInLeft.animate__delay-0.1s= subtitle
-    form(action="send.php").contact__form
+    form(action="").contact__form
       .contact__inputs-wrapper
         .contact__input-wrap
           input(type="email", value, placeholder="Ваш e-mail").contact__input
         .contact__input-wrap
-          input(type="text", value, placeholder="Ваше имя").contact__input
+          input(type="name", value, placeholder="Ваше имя").contact__input
         .contact__input-wrap.input-wrap-js
           input(id="phone-footer" type="tel").contact__input.phone-select.phone-select__footer
           <span id="error-msg" class="hide error-msg"></span>

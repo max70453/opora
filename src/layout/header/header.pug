@@ -62,16 +62,16 @@ header.header.header-mobile
 	.contact-popup__subtitle Наш менеджер ответит на все интересующие вас вопросы
 	.contact-popup__inpbox
 		.contact-popup__inpblock
-			input(id="name" type="text", autocomplete="name", name="Name", value placeholder="Ваше имя").contact-popup__input
+			input(id="name" type="name", autocomplete="name", name="Name", value placeholder="Ваше имя").contact-popup__input
 		.contact-popup__inpblock.input-wrap-js
 			input(id="phone-header" type="tel").contact-popup__input.phone-select.phone-select__popup
 			<span id="error-msg" class="hide error-msg"></span>
 		.contact-popup__inpblock
-			textarea(name="Textarea", placeholder="Комментарий/Вопрос").contact-popup__input.contact-popup__textarea
+			textarea(name="Textarea", placeholder="Комментарий/Вопрос", row="3").contact-popup__input.contact-popup__textarea
 		.contact-popup__inpblock
 			button(type="submit").contact-popup__input-submit.btn-accent Связаться
 		.contact-popup__policy Нажимая на кнопку, вы соглашаетесь с 
-			a(href="policy.html" target="blanc").contact-popup__policy-link.policy-popup политикой конфиденциальности
+			a(href="policy.html" target="_blanc").contact-popup__policy-link.policy-popup политикой конфиденциальности
 				
 		
 				
