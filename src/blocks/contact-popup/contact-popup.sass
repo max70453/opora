@@ -2,7 +2,8 @@
   width: 100%
 
 .contact-popup
-  max-height: 80%
+  max-height: 95vh
+  overflow-y: scroll
   margin: auto
   padding: 40px 45px
   width: 50%
@@ -11,6 +12,7 @@
 
   @include max-w(768)
     width: 90%
+    padding: 7%
 
 .contact-popup__title
   color: #263d4c
@@ -18,12 +20,18 @@
   font-weight: 600
   margin-bottom: 11px
 
+  @include max-w(520)
+    font-size: 20px
+
 .contact-popup__subtitle
   color: #383838
   font-size: 16px
   font-weight: 300
   line-height: 1.55
   margin-bottom: 25px
+
+  @include max-w(520)
+    font-size: 13px
 
 .contact-popup__inpbox
 
@@ -45,7 +53,7 @@
 .contact-popup__textarea
   padding-top: 17px
   resize: vertical
-  min-height: 165px
+  min-height: 110px
   max-height: 500px
 
 .contact-popup__input-submit
@@ -56,6 +64,9 @@
   padding: 0 15px
   display: block
   border: none
+
+  @include max-w(520)
+    height: 45px
 
 .contact-popup__policy
   font-size: 14px 
