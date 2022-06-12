@@ -6,5 +6,6 @@ import './examples';
 import './prices';
 import './schemeWork';
 import './contact';
+import './success-msg'
 
 export default () => {};

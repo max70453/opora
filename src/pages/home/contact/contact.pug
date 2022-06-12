@@ -13,16 +13,22 @@ section.contact(id="contact")
   .container
     h2.contact__title.title(data-wow-duration="1s").wow.animated.animate__fadeInLeft.animate__delay-0.1s= title
     .contact__subtitle(data-wow-duration="2s").wow.animated.animate__fadeInLeft.animate__delay-0.1s= subtitle
-    form(action="mail.php").contact__form
+    .contact__subtitle(data-wow-duration="2s").wow.animated.animate__fadeInLeft.animate__delay-0.1s= discount
+    form(action="mail.php").form-js.contact__form
       .contact__inputs-wrapper
+        //- Hidden Required Fields
+        input(name="secret" type="hidden" value="").contact__form-secret
+        input(type="hidden" name="project_name" value="моя-опора")
+        input(type="hidden" name="admin_email" value="loni-l@yandex.ru")
+        input(type="hidden" name="form_subject" value="Заявка на вызов замерщика")
         .contact__input-wrap
-          input(type="email", name="email", placeholder="Ваш e-mail").contact__input
+          input(type="email", name="email", placeholder="Ваш e-mail" required).contact__input
         .contact__input-wrap
-          input(type="text", name="name", placeholder="Ваше имя").contact__input
+          input(type="text", name="name", placeholder="Ваше имя" required).contact__input
         .contact__input-wrap.input-wrap-js
-          input(id="phone-footer" type="tel" name="phone").contact__input.phone-select.phone-select__footer
+          input(id="phone-footer" type="tel" name="phone" required).contact__input.phone-select.phone-select__footer
           span.hide.error-msg
         .contact__input-wrap
-          button(type="submit").contact__input-submit.btn-accent= button
+          button(type="submit").submit-js.contact__input-submit.btn-accent= button
     include /layout/footer/footer 
   .contact__dec-element

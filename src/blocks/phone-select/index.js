@@ -42,11 +42,12 @@ var errorMsg = parent.querySelector('.error-msg');
     reset();
     if (item.value.trim()) {
       if (input.isValidNumber()) {
+        reset();
         console.log('Valid');
       } else {
         item.classList.add("error");
-        var errorCode = input.getValidationError() == -99 ? 0 : input.getValidationError(); 
-        errorMsg.innerHTML = errorMap[errorCode];
+        var errorCode = input.getValidationError(); 
+        errorMsg.innerHTML = errorMap[errorCode] === undefined ? "Неверный номер" : errorMap[errorCode];
         errorMsg.classList.remove("hide");
       }
     }

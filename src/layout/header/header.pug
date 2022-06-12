@@ -63,18 +63,24 @@ header.header.header-mobile
 .mfp-hide.contact-popup(id="contact-popup").animate__animated.animate__fadeInDown
 	h2.contact-popup__title Свяжитесь с нами
 	.contact-popup__subtitle Наш менеджер ответит на все интересующие вас вопросы
-	.contact-popup__inpbox
-		.contact-popup__inpblock
-			input(id="name" type="text", autocomplete="name", name="name", placeholder="Ваше имя").contact-popup__input
-		.contact-popup__inpblock.input-wrap-js
-			input(id="phone-header" type="tel" name="phone").contact-popup__input.phone-select.phone-select__popup
-			span.hide.error-msg
-		.contact-popup__inpblock
-			textarea(name="comment", placeholder="Комментарий/Вопрос").contact-popup__input.contact-popup__textarea
-		.contact-popup__inpblock
-			button(type="submit").contact-popup__input-submit.btn-accent Связаться
-		.contact-popup__policy Нажимая на кнопку, вы соглашаетесь с 
-			a(href="policy.html" target="blanc").contact-popup__policy-link.policy-popup политикой конфиденциальности
+	form(action="mail.php").form-js.contact-popup__form
+		.contact-popup__inpbox
+			//- Hidden Required Fields
+			input(name="secret" type="hidden" value="").contact__form-secret
+			input(type="hidden" name="project_name" value="моя-опора")
+			input(type="hidden" name="admin_email" value="loni-l@yandex.ru")
+			input(type="hidden" name="form_subject" value="Свяжитесь с нами")
+			.contact-popup__inpblock
+				input(id="name" type="text", autocomplete="name", name="name", placeholder="Ваше имя" required).contact-popup__input
+			.contact-popup__inpblock.input-wrap-js
+				input(id="phone-header" type="tel" name="phone" required).contact-popup__input.phone-select.phone-select__popup
+				span.hide.error-msg
+			.contact-popup__inpblock
+				textarea(name="comment", placeholder="Комментарий/Вопрос").contact-popup__input.contact-popup__textarea
+			.contact-popup__inpblock
+				button(type="submit").submit-js.contact-popup__input-submit.btn-accent Связаться
+			.contact-popup__policy Нажимая на кнопку, вы соглашаетесь с 
+				a(href="policy.html" target="blanc").contact-popup__policy-link.policy-popup политикой конфиденциальности
 				
 		
 				
